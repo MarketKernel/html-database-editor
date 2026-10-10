@@ -1,0 +1,30 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "rootDir": ".",
+    "outDir": "dist"
+  },
+  "include": [
+    "src",
+    "test"
+  ],
+  "references": [
+    {
+      "path": "../packages/connector"
+    },
+    {
+      "path": "../packages/editor"
+    },
+    {
+      "path": "../packages/editor-impl"
+    },
+    {
+      "path": "../plugins/sqlite"
+    }
+  ]
+}

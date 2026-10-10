@@ -1,0 +1,18 @@
+{
+  "name": "@db-manager/sqlite-connector-impl",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "The SQLite connector plugin: SQLite compiled to WebAssembly in a worker, its databases kept in the browser's private file system (OPFS); Chrome only.",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "dependencies": {
+    "@db-manager/connector": "0.1.0",
+    "@sqlite.org/sqlite-wasm": "3.53.4-build2"
+  }
+}

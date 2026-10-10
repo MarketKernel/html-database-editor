@@ -1,0 +1,20 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "packages/connector"
+    },
+    {
+      "path": "plugins/sqlite"
+    },
+    {
+      "path": "packages/editor"
+    },
+    {
+      "path": "packages/editor-impl"
+    },
+    {
+      "path": "host"
+    }
+  ]
+}

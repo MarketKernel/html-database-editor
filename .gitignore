@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+coverage/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Claude Code and the architecture kit (kept locally, not in the repository)
+.claude/
+CLAUDE.md
+CODE_STANDARD.md
+ARCHITECTURE.md
+
+# Plans, notes, screenshots
+Task.md
+single-file-app-guide.md
+private/
+shots/
+
+# Env / secrets
+.env
+.env.*
+!.env.example

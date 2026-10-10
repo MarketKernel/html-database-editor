@@ -1,0 +1,14 @@
+{
+  "name": "@db-manager/connector",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "The contract of a connector plugin: a DBMS's storage, connection, schema and rows, as the editor sees any DBMS.",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@db-manager/editor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "The contract of db-manager's screen: the start screen, the database screen and the parts they are made of, over any connector plugin.",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@db-manager/connector": "0.1.0"
+  }
+}

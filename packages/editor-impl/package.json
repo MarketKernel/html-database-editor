@@ -1,0 +1,18 @@
+{
+  "name": "@db-manager/editor-impl",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "db-manager's screen on the page's DOM, by hand: the start screen, the database screen and their parts.",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "dependencies": {
+    "@db-manager/connector": "0.1.0",
+    "@db-manager/editor": "0.1.0"
+  }
+}

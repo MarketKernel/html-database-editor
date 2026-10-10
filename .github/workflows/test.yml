@@ -1,0 +1,30 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      # tsc -b, the unit tests and the arch test.
+      - run: npm test
+      # build/db-manager.html and build/pages/; build.mjs fails on an external reference.
+      - run: npm run build
+      # ubuntu-latest ships Chrome at /usr/bin/google-chrome, where tools/chrome.mjs looks.
+      - run: npm run test:browser
+
+      # The single file of every run, to download from the run's page.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: db-manager
+          path: build/db-manager.html
+          if-no-files-found: error

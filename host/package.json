@@ -1,0 +1,13 @@
+{
+  "name": "@db-manager/host",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "The host: the page's entry point, and the one package that binds the contracts to their implementations (src/serviceFactory.ts).",
+  "dependencies": {
+    "@db-manager/connector": "0.1.0",
+    "@db-manager/editor": "0.1.0",
+    "@db-manager/editor-impl": "0.1.0",
+    "@db-manager/sqlite-connector-impl": "0.1.0"
+  }
+}

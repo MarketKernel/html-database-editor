@@ -1,0 +1,28 @@
+{
+  "name": "db-manager",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "An editor of a database's schema and data over connector plugins, built into one self-contained HTML file.",
+  "workspaces": [
+    "packages/*",
+    "plugins/*",
+    "host"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -b && node build.mjs",
+    "test": "tsc -b && node --test \"{host,packages/*,plugins/*}/dist/test/**/*.test.js\"",
+    "test:browser": "node tests/app.mjs && node tests/file.mjs && node tests/pwa.mjs",
+    "check": "npm test && npm run build && npm run test:browser",
+    "start": "npm run build && node tools/serve.mjs",
+    "shots": "node tests/app.mjs --shots shots"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.12",
+    "typescript": "^5.7.0"
+  }
+}
